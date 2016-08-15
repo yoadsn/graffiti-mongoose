@@ -91,7 +91,9 @@ describe('e2e', () => {
             }
             objectIds
             sub {
-              subref
+              subref {
+                name
+              }
             }
           }
         }`);
@@ -115,7 +117,12 @@ describe('e2e', () => {
                   }
                 }]
               },
-              objectIds: [user1._id.toString()]
+              objectIds: [user1._id.toString()],
+              sub: {
+                subref: {
+                  name: 'Mother'
+                }
+              }
             }
           }
         });
